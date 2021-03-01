@@ -5,32 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEO-HQ: Fun Facts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
        
 
     <header>
+        <div class="for-h1">
         <h1>Geo-HQ</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="api.html">API</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="fun-facts.html"><b>Fun Facts</b></a></li>
+                <li><a href="fun-facts.html"><div>Fun Facts</div></a></li>
             </ul>
         </nav>
     </header>
 
     <main> 
-        <h2>Fun Facts</h2>
-        <p>(Short Description)</p>
-        <form>
-            <label for="geo">Type in a Country Name</label>
-            <input id="geo" name="geo" type="text" />
-            <button class="go" type="submit">Search for a Country</button>
-        </form>
+        <article class="top">
+                <h2>Fun Facts</h2>
+                <p>
+                    Type in any country name in the search field below to see 10 or more details about the given country.
+                    As stated previously, the REST Countries API is utilized here to gather this amazing information.
+                    Please see the "API" tab for more information on the API being used. 
+                </p>
+                <p>
+                    Type in a country name and press the "Search for a Country" button to get started!
+                </p>
+            
+            <form class="last-form">
+                <label for="geo">Type in a Country Name: </label>
+                <input id="geo" name="geo" type="text" />
+                <button class="go" type="submit">Search for a Country</button>
+            </form>
+        </article>
         <div class="response">
 
         </div>
@@ -38,11 +52,11 @@
 
     <footer>
         <ul>
-            <li><a href="mailto: eday39@gmail.com" target="_blank">Gmail</a></li>
-            <li><a href="https://github.com/avertissement" target="_blank">GitHub</a></li>
-            <li><a href="https://utah.joinhandshake.com/users/24492741" target="_blank">Handshake</a></li>
-            <li><a href="https://www.linkedin.com/in/elliott-day-36a49b162/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=100008351193476" target="_blank">Facebook</a></li>
+            <li><a href="mailto: eday39@gmail.com" target="_blank"><i class="far fa-envelope"></i></a></li>
+            <li><a href="https://github.com/avertissement" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://utah.joinhandshake.com/users/24492741" target="_blank"><i class="fas fa-handshake"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/elliott-day-36a49b162/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100008351193476" target="_blank"><i class="fab fa-facebook"></i></a></li>
         </ul>
     </footer>
     

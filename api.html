@@ -5,18 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEO-HQ: API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     
 
     <header>
-        <h1>Geo-HQ</h1>
+        <div class="for-h1">
+            <h1>Geo-HQ</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="api.html"><b>API</b></a></li>
+                <li><a href="api.html"><div>API</div></a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="fun-facts.html">Fun Facts</a></li>
             </ul>
@@ -24,21 +28,40 @@
     </header>
 
     <main>
+
+        <article>
         <h2>The API used for this Website</h2>
-        <p>(Information here)</p>
+        <p>
+            The REST Countries API is an application programming interface for gathering data about key features of any
+            given nation, primarily including the descriptive entities of official name, capital, region, subregion, population,
+            timezones, currency, language, regional bloc, native name, and land area. However, it has many more statistics that
+            can be referred to in the process.
+        </p>
+        </article>
+
+        <article class="a2">
         <h2>How the API is Being Used</h2>
-        <p>(Information here)</p>
+        <p>
+            This API is being used in the quiz by showing quick facts at the end of every question and in the fun-facts page
+            by displaying at least 10 descriptive bits of information when the user inputs a country name in the search field.
+            The variables being requested include the ones mentioned above (name, capital, region, etc.).
+        </p>
+        </article>
+
+        <article class="a3">
         <h2>API Link:</h2>
         <p><a href="https://restcountries.eu/" target="_blank">REST Countries API</a></p>
+        </article>
+
     </main>
 
     <footer>
         <ul>
-            <li><a href="mailto: eday39@gmail.com" target="_blank">Gmail</a></li>
-            <li><a href="https://github.com/avertissement" target="_blank">GitHub</a></li>
-            <li><a href="https://utah.joinhandshake.com/users/24492741" target="_blank">Handshake</a></li>
-            <li><a href="https://www.linkedin.com/in/elliott-day-36a49b162/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=100008351193476" target="_blank">Facebook</a></li>
+            <li><a href="mailto: eday39@gmail.com" target="_blank"><i class="far fa-envelope"></i></a></li>
+            <li><a href="https://github.com/avertissement" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://utah.joinhandshake.com/users/24492741" target="_blank"><i class="fas fa-handshake"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/elliott-day-36a49b162/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100008351193476" target="_blank"><i class="fab fa-facebook"></i></a></li>
         </ul>
     </footer>
 

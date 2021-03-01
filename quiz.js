@@ -20,18 +20,24 @@ function ready() {
                 }
 
                 $('main').html(`
-                <h3>Question 1</h3>
-                    <p>What is the population of Italy?</p>
-                    <form class="question-form">
-                        <ul>
-                            <li><button class="button1">A - ${q1['A.']}</button></li>
-                            <li><button class="button2">B - ${q1['B.']}</button></li>
-                            <li><button class="button3">C - ${q1['C.']}</button></li>
-                            <li><button class="button4">D - ${q1['D.']}</button></li>
-                        </ul>
-                        <button class="end-of-question" type="submit">Submit Answer</button>
-                    </form>
-                    <button class="restart">Restart</button>
+                <div class="overall-q">
+
+                    <h3>Question 1</h3>
+                        <p class="question01">What is the population of Italy?</p>
+                        <form class="question-form">
+                            <ul>
+                                <li><button class="button1">A - ${q1['A.']}</button></li>
+                                <li><button class="button2">B - ${q1['B.']}</button></li>
+                                <li><button class="button3">C - ${q1['C.']}</button></li>
+                                <li><button class="button4">D - ${q1['D.']}</button></li>
+                            </ul>
+                            <div class="end-buttons">
+                                <button class="end-of-question" type="submit">Submit Answer</button>
+                        </form>
+                                <button class="restart">Restart</button>
+                            </div>
+
+                </div>
                 `);
 
 
@@ -174,16 +180,20 @@ function ready() {
                     .then(resultJson => now(resultJson))
                     function now(answer) {
                         $('.quiz-main').html(`
-                        <h3>That's correct! "A - ${q1['A.']}" is the answer.</h3>
-                        <button class="move-on">Next Question</button>
-                        <h4>Quick Stats</h4>
-                            <ul>
-                                <li>Capital: ${answer[0].capital}</li>
-                                <li>Region: ${answer[0].region}</li>
-                                <li>Timezones: ${answer[0].timezones}</li>
-                                <li>Currency: ${answer[0].currencies[0].name}</li>
-                                <li>Language: ${answer[0].languages[0].name}</li>
-                            </ul>
+                        <div class="overall-q">
+
+                            <h3>That's correct! "A - ${q1['A.']}" is the answer.</h3>
+                            <div class="for-move-on"><button class="move-on">Next Question</button></div>
+                            <h4>Quick Stats</h4>
+                                <ul class="particular-ul">
+                                    <li>Capital: ${answer[0].capital}</li>
+                                    <li>Region: ${answer[0].region}</li>
+                                    <li>Timezones: ${answer[0].timezones}</li>
+                                    <li>Currency: ${answer[0].currencies[0].name}</li>
+                                    <li>Language: ${answer[0].languages[0].name}</li>
+                                </ul>
+
+                        </div>
                         `)
                         $('.move-on').on('click', function(){
                             populateQ2();
@@ -197,16 +207,20 @@ function ready() {
                     .then(resultJson => now(resultJson))
                     function now(answer) {
                         $('.quiz-main').html(`
-                        <h3>That's incorrect. "A - ${q1['A.']}" is the answer.</h3>
-                        <button class="move-on">Next Question</button>
-                        <h4>Quick Stats</h4>
-                            <ul>
-                                <li>Capital: ${answer[0].capital}</li>
-                                <li>Region: ${answer[0].region}</li>
-                                <li>Timezones: ${answer[0].timezones}</li>
-                                <li>Currency: ${answer[0].currencies[0].name}</li>
-                                <li>Language: ${answer[0].languages[0].name}</li>
-                            </ul>
+                        <div class="overall-q">
+
+                            <h3>That's incorrect. "A - ${q1['A.']}" is the answer.</h3>
+                            <div class="for-move-on"><button class="move-on">Next Question</button></div>
+                            <h4>Quick Stats</h4>
+                                <ul class="particular-ul">
+                                    <li>Capital: ${answer[0].capital}</li>
+                                    <li>Region: ${answer[0].region}</li>
+                                    <li>Timezones: ${answer[0].timezones}</li>
+                                    <li>Currency: ${answer[0].currencies[0].name}</li>
+                                    <li>Language: ${answer[0].languages[0].name}</li>
+                                </ul>
+
+                        </div>
                         `)
                         $('.move-on').on('click', function(){
                             populateQ2();
@@ -232,18 +246,24 @@ function ready() {
                 }
         
                 $('main').html(`
-                <h3>Question 2</h3>
-                    <p>What broad region is Mexico within?</p>
-                    <form class="question-form">
-                        <ul>
-                            <li><button class="button1">A - ${q2['A.']}</button></li>
-                            <li><button class="button2">B - ${q2['B.']}</button></li>
-                            <li><button class="button3">C - ${q2['C.']}</button></li>
-                            <li><button class="button4">D - ${q2['D.']}</button></li>
-                        </ul>
-                        <button class="end-of-question" type="submit">Submit Answer</button>
-                    </form>
-                    <button class="restart">Restart</button>
+                <div class="overall-q">
+
+                    <h3>Question 2</h3>
+                        <p class="question02">What broad region is Mexico within?</p>
+                        <form class="question-form">
+                            <ul>
+                                <li><button class="button1">A - ${q2['A.']}</button></li>
+                                <li><button class="button2">B - ${q2['B.']}</button></li>
+                                <li><button class="button3">C - ${q2['C.']}</button></li>
+                                <li><button class="button4">D - ${q2['D.']}</button></li>
+                            </ul>
+                            <div class="end-buttons">
+                                <button class="end-of-question" type="submit">Submit Answer</button>
+                        </form>
+                                <button class="restart">Restart</button>
+                            </div>
+
+                </div>
                 `);
         
                 $('.button1').on('click', function(e) {
@@ -385,16 +405,20 @@ function ready() {
                     .then(resultJson => now(resultJson))
                     function now(answer) {
                         $('.quiz-main').html(`
-                        <h3>That's correct! "A - ${q2['A.']}" is the answer.</h3>
-                        <button class="move-on">Next Question</button>
-                        <h4>Quick Stats</h4>
-                            <ul>
-                                <li>Capital: ${answer[0].capital}</li>
-                                <li>Region: ${answer[0].region}</li>
-                                <li>Timezones: ${answer[0].timezones}</li>
-                                <li>Currency: ${answer[0].currencies[0].name}</li>
-                                <li>Language: ${answer[0].languages[0].name}</li>
-                            </ul>
+                        <div class="overall-q">
+
+                            <h3>That's correct! "A - ${q2['A.']}" is the answer.</h3>
+                            <div class="for-move-on"><button class="move-on">Next Question</button></div>
+                            <h4>Quick Stats</h4>
+                                <ul class="particular-ul">
+                                    <li>Capital: ${answer[0].capital}</li>
+                                    <li>Region: ${answer[0].region}</li>
+                                    <li>Timezones: ${answer[0].timezones}</li>
+                                    <li>Currency: ${answer[0].currencies[0].name}</li>
+                                    <li>Language: ${answer[0].languages[0].name}</li>
+                                </ul>
+
+                        </div>
                         `)
                         $('.move-on').on('click', function(){
                             populateQ3();
@@ -408,16 +432,20 @@ function ready() {
                     .then(resultJson => now(resultJson))
                     function now(answer) {
                         $('.quiz-main').html(`
-                        <h3>That's incorrect. "A - ${q2['A.']}" is the answer.</h3>
-                        <button class="move-on">Next Question</button>
-                        <h4>Quick Stats</h4>
-                            <ul>
-                                <li>Capital: ${answer[0].capital}</li>
-                                <li>Region: ${answer[0].region}</li>
-                                <li>Timezones: ${answer[0].timezones}</li>
-                                <li>Currency: ${answer[0].currencies[0].name}</li>
-                                <li>Language: ${answer[0].languages[0].name}</li>
-                            </ul>
+                        <div class="overall-q">
+
+                            <h3>That's incorrect. "A - ${q2['A.']}" is the answer.</h3>
+                            <div class="for-move-on"><button class="move-on">Next Question</button></div>
+                            <h4>Quick Stats</h4>
+                                <ul class="particular-ul">
+                                    <li>Capital: ${answer[0].capital}</li>
+                                    <li>Region: ${answer[0].region}</li>
+                                    <li>Timezones: ${answer[0].timezones}</li>
+                                    <li>Currency: ${answer[0].currencies[0].name}</li>
+                                    <li>Language: ${answer[0].languages[0].name}</li>
+                                </ul>
+
+                        </div>
                         `)
                         $('.move-on').on('click', function(){
                             populateQ3();
@@ -444,18 +472,24 @@ function ready() {
                 }
         
                 $('main').html(`
-                <h3>Question 3</h3>
-                    <p>What is the timezone of the United Arab Emirates?</p>
-                    <form class="question-form">
-                        <ul>
-                            <li><button class="button1">A - ${q3['A.']}</button></li>
-                            <li><button class="button2">B - ${q3['B.']}</button></li>
-                            <li><button class="button3">C - ${q3['C.']}</button></li>
-                            <li><button class="button4">D - ${q3['D.']}</button></li>
-                        </ul>
-                        <button class="end-of-question" type="submit">Submit Answer</button>
-                    </form>
-                    <button class="restart">Restart</button>
+                <div class="overall-q">
+
+                    <h3>Question 3</h3>
+                        <p class="question03">What is the timezone of the United Arab Emirates?</p>
+                        <form class="question-form">
+                            <ul>
+                                <li><button class="button1">A - ${q3['A.']}</button></li>
+                                <li><button class="button2">B - ${q3['B.']}</button></li>
+                                <li><button class="button3">C - ${q3['C.']}</button></li>
+                                <li><button class="button4">D - ${q3['D.']}</button></li>
+                            </ul>
+                            <div class="end-buttons">
+                                <button class="end-of-question" type="submit">Submit Answer</button>
+                        </form>
+                                <button class="restart">Restart</button>
+                            </div>
+
+                </div>
                 `);
         
                 $('.button1').on('click', function(e) {
@@ -597,16 +631,20 @@ function ready() {
                     .then(resultJson => now(resultJson))
                     function now(answer) {
                         $('.quiz-main').html(`
-                        <h3>That's correct! "C - ${q3['C.']}" is the answer.</h3>
-                        <button class="move-on">Next Question</button>
-                        <h4>Quick Stats</h4>
-                            <ul>
-                                <li>Capital: ${answer[0].capital}</li>
-                                <li>Region: ${answer[0].region}</li>
-                                <li>Timezones: ${answer[0].timezones}</li>
-                                <li>Currency: ${answer[0].currencies[0].name}</li>
-                                <li>Language: ${answer[0].languages[0].name}</li>
-                            </ul>
+                        <div class="overall-q">
+
+                            <h3>That's correct! "C - ${q3['C.']}" is the answer.</h3>
+                            <div class="for-move-on"><button class="move-on">Next Question</button></div>
+                            <h4>Quick Stats</h4>
+                                <ul class="particular-ul">
+                                    <li>Capital: ${answer[0].capital}</li>
+                                    <li>Region: ${answer[0].region}</li>
+                                    <li>Timezones: ${answer[0].timezones}</li>
+                                    <li>Currency: ${answer[0].currencies[0].name}</li>
+                                    <li>Language: ${answer[0].languages[0].name}</li>
+                                </ul>
+
+                        </div>
                         `)
                         $('.move-on').on('click', function(){
                             populateQ4();
@@ -620,16 +658,20 @@ function ready() {
                     .then(resultJson => now(resultJson))
                     function now(answer) {
                         $('.quiz-main').html(`
-                        <h3>That's incorrect. "C - ${q3['C.']}" is the answer.</h3>
-                        <button class="move-on">Next Question</button>
-                        <h4>Quick Stats</h4>
-                            <ul>
-                                <li>Capital: ${answer[0].capital}</li>
-                                <li>Region: ${answer[0].region}</li>
-                                <li>Timezones: ${answer[0].timezones}</li>
-                                <li>Currency: ${answer[0].currencies[0].name}</li>
-                                <li>Language: ${answer[0].languages[0].name}</li>
-                            </ul>
+                        <div class="overall-q">
+
+                            <h3>That's incorrect. "C - ${q3['C.']}" is the answer.</h3>
+                            <div class="for-move-on"><button class="move-on">Next Question</button></div>
+                            <h4>Quick Stats</h4>
+                                <ul class="particular-ul">
+                                    <li>Capital: ${answer[0].capital}</li>
+                                    <li>Region: ${answer[0].region}</li>
+                                    <li>Timezones: ${answer[0].timezones}</li>
+                                    <li>Currency: ${answer[0].currencies[0].name}</li>
+                                    <li>Language: ${answer[0].languages[0].name}</li>
+                                </ul>
+
+                        </div>
                         `)
                         $('.move-on').on('click', function(){
                             populateQ4();
@@ -655,18 +697,24 @@ function ready() {
                 }
         
                 $('main').html(`
-                <h3>Question 4</h3>
-                    <p>What is the capital of China?</p>
-                    <form class="question-form">
-                        <ul>
-                            <li><button class="button1">A - ${q4['A.']}</button></li>
-                            <li><button class="button2">B - ${q4['B.']}</button></li>
-                            <li><button class="button3">C - ${q4['C.']}</button></li>
-                            <li><button class="button4">D - ${q4['D.']}</button></li>
-                        </ul>
-                        <button class="end-of-question" type="submit">Submit Answer</button>
-                    </form>
-                    <button class="restart">Restart</button>
+                <div class="overall-q">
+
+                    <h3>Question 4</h3>
+                        <p class="question04">What is the capital of China?</p>
+                        <form class="question-form">
+                            <ul>
+                                <li><button class="button1">A - ${q4['A.']}</button></li>
+                                <li><button class="button2">B - ${q4['B.']}</button></li>
+                                <li><button class="button3">C - ${q4['C.']}</button></li>
+                                <li><button class="button4">D - ${q4['D.']}</button></li>
+                            </ul>
+                            <div class="end-buttons">
+                                <button class="end-of-question" type="submit">Submit Answer</button>
+                        </form>
+                                <button class="restart">Restart</button>
+                            </div>
+
+                </div>
                 `);
         
                 $('.button1').on('click', function(e) {
@@ -808,16 +856,20 @@ function ready() {
                     .then(resultJson => now(resultJson))
                     function now(answer) {
                         $('.quiz-main').html(`
-                        <h3>That's correct! "A - ${q4['A.']}" is the answer.</h3>
-                        <button class="move-on">Next Question</button>
-                        <h4>Quick Stats</h4>
-                            <ul>
-                                <li>Capital: ${answer[0].capital}</li>
-                                <li>Region: ${answer[0].region}</li>
-                                <li>Timezones: ${answer[0].timezones}</li>
-                                <li>Currency: ${answer[0].currencies[0].name}</li>
-                                <li>Language: ${answer[0].languages[0].name}</li>
-                            </ul>
+                        <div class="overall-q">
+
+                            <h3>That's correct! "A - ${q4['A.']}" is the answer.</h3>
+                            <div class="for-move-on"><button class="move-on">Next Question</button></div>
+                            <h4>Quick Stats</h4>
+                                <ul class="particular-ul">
+                                    <li>Capital: ${answer[0].capital}</li>
+                                    <li>Region: ${answer[0].region}</li>
+                                    <li>Timezones: ${answer[0].timezones}</li>
+                                    <li>Currency: ${answer[0].currencies[0].name}</li>
+                                    <li>Language: ${answer[0].languages[0].name}</li>
+                                </ul>
+
+                        </div>
                         `)
                         $('.move-on').on('click', function(){
                             populateQ5();
@@ -831,16 +883,20 @@ function ready() {
                     .then(resultJson => now(resultJson))
                     function now(answer) {
                         $('.quiz-main').html(`
-                        <h3>That's incorrect. "A - ${q4['A.']}" is the answer.</h3>
-                        <button class="move-on">Next Question</button>
-                        <h4>Quick Stats</h4>
-                            <ul>
-                                <li>Capital: ${answer[0].capital}</li>
-                                <li>Region: ${answer[0].region}</li>
-                                <li>Timezones: ${answer[0].timezones}</li>
-                                <li>Currency: ${answer[0].currencies[0].name}</li>
-                                <li>Language: ${answer[0].languages[0].name}</li>
-                            </ul>
+                        <div class="overall-q">
+
+                            <h3>That's incorrect. "A - ${q4['A.']}" is the answer.</h3>
+                            <div class="for-move-on"><button class="move-on">Next Question</button></div>
+                            <h4>Quick Stats</h4>
+                                <ul class="particular-ul">
+                                    <li>Capital: ${answer[0].capital}</li>
+                                    <li>Region: ${answer[0].region}</li>
+                                    <li>Timezones: ${answer[0].timezones}</li>
+                                    <li>Currency: ${answer[0].currencies[0].name}</li>
+                                    <li>Language: ${answer[0].languages[0].name}</li>
+                                </ul>
+
+                        </div>
                         `)
                         $('.move-on').on('click', function(){
                             populateQ5();
@@ -866,18 +922,24 @@ function ready() {
                 }
         
                 $('main').html(`
-                <h3>Question 5</h3>
-                    <p>What is the currency of Russia?</p>
-                    <form class="question-form">
-                        <ul>
-                            <li><button class="button1">A - ${q5['A.']}</button></li>
-                            <li><button class="button2">B - ${q5['B.']}</button></li>
-                            <li><button class="button3">C - ${q5['C.']}</button></li>
-                            <li><button class="button4">D - ${q5['D.']}</button></li>
-                        </ul>
-                        <button class="end-of-question" type="submit">Submit Answer</button>
-                    </form>
-                    <button class="restart">Restart</button>
+                <div class="overall-q">
+
+                    <h3>Question 5</h3>
+                        <p class="question05">What is the currency of Russia?</p>
+                        <form class="question-form">
+                            <ul>
+                                <li><button class="button1">A - ${q5['A.']}</button></li>
+                                <li><button class="button2">B - ${q5['B.']}</button></li>
+                                <li><button class="button3">C - ${q5['C.']}</button></li>
+                                <li><button class="button4">D - ${q5['D.']}</button></li>
+                            </ul>
+                            <div class="end-buttons">
+                                <button class="end-of-question" type="submit">Submit Answer</button>
+                        </form>
+                                <button class="restart">Restart</button>
+                            </div>
+
+                </div>
                 `);
         
                 $('.button1').on('click', function(e) {
@@ -1019,16 +1081,20 @@ function ready() {
                     .then(resultJson => now(resultJson))
                     function now(answer) {
                         $('.quiz-main').html(`
-                        <h3>That's correct! "C - ${q5['C.']}" is the answer.</h3>
-                        <button class="move-on">End Quiz</button>
-                        <h4>Quick Stats</h4>
-                            <ul>
-                                <li>Capital: ${answer[0].capital}</li>
-                                <li>Region: ${answer[0].region}</li>
-                                <li>Timezones: ${answer[0].timezones}</li>
-                                <li>Currency: ${answer[0].currencies[0].name}</li>
-                                <li>Language: ${answer[0].languages[0].name}</li>
-                            </ul>
+                        <div class="overall-q">
+
+                            <h3>That's correct! "C - ${q5['C.']}" is the answer.</h3>
+                            <div class="for-move-on"><button class="move-on">End Quiz</button></div>
+                            <h4>Quick Stats</h4>
+                                <ul class="particular-ul">
+                                    <li>Capital: ${answer[0].capital}</li>
+                                    <li>Region: ${answer[0].region}</li>
+                                    <li>Timezones: ${answer[0].timezones}</li>
+                                    <li>Currency: ${answer[0].currencies[0].name}</li>
+                                    <li>Language: ${answer[0].languages[0].name}</li>
+                                </ul>
+
+                        </div>
                         `)
                         $('.move-on').on('click', function(){
                             last();
@@ -1042,16 +1108,20 @@ function ready() {
                     .then(resultJson => now(resultJson))
                     function now(answer) {
                         $('.quiz-main').html(`
-                        <h3>That's incorrect. "C - ${q5['C.']}" is the answer.</h3>
-                        <button class="move-on">End Quiz</button>
-                        <h4>Quick Stats</h4>
-                            <ul>
-                                <li>Capital: ${answer[0].capital}</li>
-                                <li>Region: ${answer[0].region}</li>
-                                <li>Timezones: ${answer[0].timezones}</li>
-                                <li>Currency: ${answer[0].currencies[0].name}</li>
-                                <li>Language: ${answer[0].languages[0].name}</li>
-                            </ul>
+                        <div class="overall-q">
+
+                            <h3>That's incorrect. "C - ${q5['C.']}" is the answer.</h3>
+                            <div class="for-move-on"><button class="move-on">End Quiz</button></div>
+                            <h4>Quick Stats</h4>
+                                <ul class="particular-ul">
+                                    <li>Capital: ${answer[0].capital}</li>
+                                    <li>Region: ${answer[0].region}</li>
+                                    <li>Timezones: ${answer[0].timezones}</li>
+                                    <li>Currency: ${answer[0].currencies[0].name}</li>
+                                    <li>Language: ${answer[0].languages[0].name}</li>
+                                </ul>
+
+                        </div>
                         `)
                         $('.move-on').on('click', function(){
                             last();
@@ -1070,8 +1140,12 @@ function ready() {
 
             function last() {
                 $('.quiz-main').html(`
-                <h4>Your quiz score was: ${X}/100</h4>
-                <button class="restart">Restart</button>
+                <div class="overall-q">
+
+                    <h4>Your quiz score was: ${X}/100</h4>
+                    <div class="for-restart"><button class="restart">Restart</button></div>
+
+                </div>
                 `)
                 $('.restart').on('click', function(){
                     alert("The quiz has restarted.");

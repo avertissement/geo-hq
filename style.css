@@ -1,3 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('web-images/for-website.jpg');
+    background-repeat: no-repeat;
+    background-position: 100%;
+}
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -5,62 +15,193 @@ nav ul {
 }
 
 nav ul li a {
-    letter-spacing: 3px;
-    margin: 25px;
+    letter-spacing: 5px;
+    margin: 50px;
     text-decoration: none;
 }
 
-nav ul li a:link {color: gray;}
+nav ul li a:link {
+    color: #EDB88B;
+    font-weight: 900;
+    font-size: 20px;
+}
 
-nav ul li a:visited {color: gray;}
+nav ul li a:visited {
+    color:#EDB88B;
+    font-weight: 900;
+}
 
-nav ul li a:hover {color: black;}
+nav ul li a:hover {
+    color: lightgray;
+    font-weight: 900;
+}
 
-nav ul li a:active {color: navy;}
+nav ul li a:active {
+    color: navy;
+    font-weight: 900;
+}
+
+.for-h1 {
+    display: flex;
+    justify-content: center;
+}
 
 h1 {
-    text-align: center;
     font-weight: 600;
-    font-family: sans-serif;
+    font-family: Verdana, Tahoma, sans-serif;
+    color: #FFE8E1;
+    font-size: 50px;
+}
+
+.for-padding {
+    padding: 25px 15px;
+    background-color: #F2D0A4;
+    border-radius: 1%;
 }
 
 .paras {
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    color: #2B2D42;
+}
+
+.paras-again {
+    margin-top: 75px;
 }
 
 main {
     margin-top: 100px;
 }
 
-ul {
+footer ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; 
 }
 
-ul li {
+footer ul li {
     list-style-type: none;
 }
 
-ul li a {
-    margin: 25px;
+footer ul li a {
     text-decoration: none;
+    color: darkred;
+    font-size: 30px;
 }
 
 footer {
     background-color: lightgray;
     padding: 50px;
-    margin-top: 250px;
+    margin-top: 150px;
 }
-
-ul li a:link {color: navy;}
-
-ul li a:visited {color: navy;}
-
-ul li a:hover {color: black;}
-
-ul li a:active {color: white;}
 
 .button1, .button2, .button3, .button4 {
     background: gray;
+}
+
+h2 {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+p {
+    text-align: center;
+    margin: 15px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-family: "Comic Sans MS"
+}
+
+.last {
+    margin-top: 100px;
+}
+
+.hold-images {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 500px;
+}
+
+.second-img {
+    width: 700px;
+}
+
+article {
+    background-color: #F2D0A4;
+    border-radius: 1%;
+    padding: 25px 15px;
+}
+
+.a2 {
+    margin-top: 25px;
+}
+
+.a3 {
+    margin-top: 25px;
+}
+
+.for-button {
+    display: flex;
+    justify-content: center;
+}
+
+h3, .question01, .question02, .question03, .question04, .question05, h4 {
+    text-align: center;
+}
+
+h4 {
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.overall-q {
+    background-color: #F2D0A4;
+    padding: 15px;
+}
+
+.question-form ul, .particular-ul {
+    display: flex; 
+    justify-content: space-around;
+    list-style-type: none;
+    margin-bottom: 50px;
+}
+
+.particular-ul li {
+    font-family: monospace;
+}
+
+.end-buttons, .for-move-on, .for-restart {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.end-of-question {
+    margin-right: 5px;
+}
+
+.top {
+    background-color: #F2D0A4;
+    padding-bottom: 50px;
+}
+
+.last-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#geo {
+    margin: 0px 10px;
+}
+
+header nav ul li a {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li a div {
+    color: #fff;
 }
