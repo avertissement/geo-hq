@@ -28,23 +28,23 @@
     </header>
 
     <main> 
-        <article class="top">
-                <h2>Fun Facts</h2>
-                <p>
+        <div class="top">
+                <h2 tabindex="0">Fun Facts</h2>
+                <p tabindex="0">
                     Type in any country name in the search field below to see 10 or more details about the given country.
                     As stated previously, the REST Countries API is utilized here to gather this amazing information.
                     Please see the "API" tab for more information on the API being used. 
                 </p>
-                <p>
+                <p tabindex="0">
                     Type in a country name and press the "Search for a Country" button to get started!
                 </p>
             
             <form class="last-form">
-                <label for="geo">Type in a Country Name: </label>
+                <label for="geo" tabindex="0">Type in a Country Name: </label>
                 <input id="geo" name="geo" type="text" />
-                <button class="go" type="submit">Search for a Country</button>
+                <button class="go" type="submit" aria-pressed="false">Search for a Country</button>
             </form>
-        </article>
+        </div>
         <div class="response">
 
         </div>

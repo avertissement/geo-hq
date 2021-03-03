@@ -51,6 +51,7 @@ h1 {
     font-family: Verdana, Tahoma, sans-serif;
     color: #FFE8E1;
     font-size: 50px;
+    letter-spacing: 25px;
 }
 
 .for-padding {
@@ -108,7 +109,8 @@ p {
     margin: 15px;
     margin-bottom: 50px;
     font-size: 20px;
-    font-family: "Comic Sans MS"
+    font-family: "Comic Sans MS";
+    line-height: 55px;
 }
 
 .last {
@@ -120,12 +122,17 @@ p {
     justify-content: center;
 }
 
-img {
+.first-img {
     width: 500px;
+    height: 750px;
+    border: solid gray 2px;
 }
 
 .second-img {
     width: 700px;
+    height: 750px;
+    margin-left: 10px;
+    border: solid gray 2px;
 }
 
 article {
@@ -185,6 +192,7 @@ h4 {
 .top {
     background-color: #F2D0A4;
     padding-bottom: 50px;
+    padding-top: 30px;
 }
 
 .last-form {
@@ -204,4 +212,30 @@ header nav ul li a {
 
 header nav ul li a div {
     color: #fff;
+}
+
+.error {
+    color: darkred;
+}
+
+.fun-list {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.fun-list li {
+    margin: 0px 10px;
+    margin-bottom: 15px;
+    border: 2px solid black;
+    color: #fff;
+    background-color: #000;
+    padding: 5px;
+    border-radius: 10%;
+}
+
+.response h2 {
+    font-family: Verdana;
+    margin-bottom: 50px;
 }

@@ -1,43 +1,53 @@
 function readyNow() {
     $('form').on('submit', function(e){
         e.preventDefault();
+        $('.response').css({
+            "background-image": "url('web-images/rustic.jpg')",
+            "background-position": "100%",
+            "padding": "25px 15px"
+        });
+        $('.last-form').find('button').attr('aria-pressed', 'true');
         let country = $('#geo').val();
         country = country.toLowerCase();
         fetch(`https://restcountries.eu/rest/v2/name/${country}`)
         .then(response => response.json())
         .then(responseJson => keep(responseJson))
         .catch(error => errorMessage(error))
+        $('#geo').val('');
     })
 
     function errorMessage(arg) {
-        console.log(arg)
         $('.response').html(`
-        <h3>Error</h3>
-        <h4>
+        <h3 class="error" tabindex="0">ERROR</h3>
+        <h4 tabindex="0">
         Please type in a valid country name. If the country's name is more than one word, try referring to the one-part version
         of the name or its abbreviation (i.e., UAE instead of United Arab Emirates or Britain instead of the U.K.). It is also
         possible that the name was misspelled. Otherwise, we may not have access to the given country.
         </h4>
-        `)
+        `);
+        buttonReset();
+        function buttonReset() {
+            $('.last-form').find('button').attr('aria-pressed', 'false');
+        }
     }
 
     function keep(param) {
         $('.response').html(`
-        <h2>Results:</h2>
-            <ul>
-                <li class="o-name"></li>
-                <li class="capital"></li>
-                <li class="region"></li>
-                <li class="subregion"></li>
-                <li class="population"></li>
-                <li class="timezones">Timezones: </li>
-                <li class="currency"></li>
-                <li class="language"></li>
-                <li class="regional-bloc"></li>
-                <li class="n-name"></li>
-                <li class="land-area"></li>
+        <h2 tabindex="0">RESULTS:</h2>
+            <ul class="fun-list">
+                <li class="o-name" tabindex="0"></li>
+                <li class="capital" tabindex="0"></li>
+                <li class="region" tabindex="0"></li>
+                <li class="subregion" tabindex="0"></li>
+                <li class="population" tabindex="0"></li>
+                <li class="timezones" tabindex="0">Timezones: </li>
+                <li class="currency" tabindex="0"></li>
+                <li class="language" tabindex="0"></li>
+                <li class="regional-bloc" tabindex="0"></li>
+                <li class="n-name" tabindex="0"></li>
+                <li class="land-area" tabindex="0"></li>
             </ul>
-        `)
+        `);
 
         const oName = param[0].name;
         const capital = param[0].capital;
@@ -62,54 +72,35 @@ function readyNow() {
         regionalBloc1();
         nName1();
         landArea1();
+        buttonReset();
 
         function oName1() {
-            console.log(oName)
             if(oName) {
-                return $('.o-name').html(`Official Name: ${oName}`)
-            }
-            else {
-                return $('.o-name').html('N/A')
+                return $('.o-name').html(`Official Name: ${oName}`);
             }
         }
 
         function capital1() {
-            console.log(capital)
             if(capital) {
-                return $('.capital').html(`Capital: ${capital}`)
-            }
-            else {
-                return $('.capital').html('N/A')
+                return $('.capital').html(`Capital: ${capital}`);
             }
         }
 
         function region1() {
-            console.log(region)
             if(region) {
-                return $('.region').html(`Region: ${region}`)
-            }
-            else {
-                return $('.region').html('N/A')
+                return $('.region').html(`Region: ${region}`);
             }
         }
 
         function subregion1() {
-            console.log(subregion)
             if(subregion) {
-                return $('.subregion').html(`Subregion: ${subregion}`)
-            }
-            else {
-                return $('.subregion').html('N/A')
+                return $('.subregion').html(`Subregion: ${subregion}`);
             }
         }
 
         function population1() { 
-            console.log(population)
             if(population) {
-                return $('.population').html(`Population: ${population}`)
-            }
-            else {
-                return $('.population').html('N/A')
+                return $('.population').html(`Population: ${population}`);
             }
         }
 
@@ -117,65 +108,54 @@ function readyNow() {
             if(timezones) {
                 for(let i=0; i<timezones.length; i++) {
                     const currentTimezone = timezones[i];
-                    console.log(currentTimezone)
-                    $('.timezones').append(`${currentTimezone}`)
+                    $('.timezones').append(`${currentTimezone} `);
                 }
-            }
-            else {
-                return $('.timezones').html('N/A')
             }
         }
 
         function currency1() {
-            console.log(currency)
             if(currency) {
-                return $('.currency').html(`Currency: ${currency}`)
-            }
-            else {
-                return $('.currency').html('N/A')
+                return $('.currency').html(`Currency: ${currency}`);
             }
         }
 
         function language1() {
-            console.log(language)
             if(language) {
-                return $('.language').html(`Language(s): ${language}`)
-            }
-            else {
-                return $('.language').html('N/A')
+                return $('.language').html(`Language(s): ${language}`);
             }
         }
 
         function regionalBloc1() {
-            console.log(regionalBloc)
-            const emptyArr = new Array();
-            if(regionalBloc) {
+            if(regionalBloc && regionalBloc.length > 0) {
                 for(let i=0; i<regionalBloc.length; i++) {
-                    return $('.regional-bloc').html(`Regional Bloc: ${regionalBloc[i].name}`)
+                    return $('.regional-bloc').html(`Regional Bloc: ${regionalBloc[i].name}`);
                 }
             }
+            else {
+                return $('.regional-bloc').html(`Regional Bloc: N/A`);
+            } 
         }
 
         function nName1() { 
-            console.log(nName)
             if(nName) {
-                return $('.n-name').html(`Native Name: ${nName}`)
-            }
-            else {
-                return $('.n-name').html('N/A')
+                return $('.n-name').html(`Native Name: ${nName}`);
             }
         }
 
         function landArea1() {
-            console.log(landArea)
             if(landArea) {
-                return $('.land-area').html(`Land Area: ${landArea} square kilometers`)
+                return $('.land-area').html(`Land Area: ${landArea} square kilometers`);
             }
-            else {
-                return $('.land-area').html('N/A')
-            }
+        }
+
+        function buttonReset() {
+            $('.last-form').find('button').attr('aria-pressed', 'false');
         }
     }
 }
+
+
+
+
 
 readyNow()
