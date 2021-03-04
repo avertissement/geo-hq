@@ -19,7 +19,7 @@ function readyNow() {
     function errorMessage(arg) {
         $('.response').html(`
         <h3 class="error" tabindex="0">ERROR</h3>
-        <h4 tabindex="0">
+        <h4 tabindex="0" class="err-message">
         Please type in a valid country name. If the country's name is more than one word, try referring to the one-part version
         of the name or its abbreviation (i.e., UAE instead of United Arab Emirates or Britain instead of the U.K.). It is also
         possible that the name was misspelled. Otherwise, we may not have access to the given country.

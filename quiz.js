@@ -22,9 +22,10 @@ function ready() {
 
                 $('main').html(`
                 <div class="overall-q">
-
-                    <h3 tabindex="0">Question 1</h3>
+                    <div class="fix">
+                        <h3 tabindex="0">Question 1</h3>
                         <p class="question01" tabindex="0">What is the population of Italy?</p>
+                    </div>
                         <form class="question-form">
                             <ul>
                                 <li><button class="button1" aria-pressed="false">A - ${q1['A.']}</button></li>
@@ -230,9 +231,11 @@ function ready() {
                         $('.quiz-main').html(`
                         <div class="overall-q">
 
+                            <div class="fix">
                             <h3 tabindex="0">That's correct! "A - ${q1['A.']}" is the answer.</h3>
                             <div class="for-move-on"><button class="move-on" aria-pressed="false">Next Question</button></div>
                             <h4 tabindex="0">Quick Stats</h4>
+                            </div>
                                 <ul class="particular-ul">
                                     <li tabindex="0">Capital: ${answer[0].capital}</li>
                                     <li tabindex="0">Region: ${answer[0].region}</li>
@@ -258,9 +261,11 @@ function ready() {
                         $('.quiz-main').html(`
                         <div class="overall-q">
 
+                            <div class="fix">
                             <h3 tabindex="0">That's incorrect. "A - ${q1['A.']}" is the answer.</h3>
                             <div class="for-move-on"><button class="move-on" aria-pressed="false">Next Question</button></div>
                             <h4 tabindex="0">Quick Stats</h4>
+                            </div>
                                 <ul class="particular-ul">
                                     <li tabindex="0">Capital: ${answer[0].capital}</li>
                                     <li tabindex="0">Region: ${answer[0].region}</li>
@@ -299,9 +304,10 @@ function ready() {
         
                 $('main').html(`
                 <div class="overall-q">
-
-                    <h3 tabindex="0">Question 2</h3>
+                    <div class="fix">
+                        <h3 tabindex="0">Question 2</h3>
                         <p class="question02" tabindex="0">What broad region is Mexico within?</p>
+                    </div>
                         <form class="question-form">
                             <ul>
                                 <li><button class="button1" aria-pressed="false">A - ${q2['A.']}</button></li>
@@ -506,9 +512,11 @@ function ready() {
                         $('.quiz-main').html(`
                         <div class="overall-q">
 
+                            <div class="fix">
                             <h3 tabindex="0">That's correct! "A - ${q2['A.']}" is the answer.</h3>
                             <div class="for-move-on"><button class="move-on" aria-pressed="false">Next Question</button></div>
                             <h4 tabindex="0">Quick Stats</h4>
+                            </div>
                                 <ul class="particular-ul">
                                     <li tabindex="0">Capital: ${answer[0].capital}</li>
                                     <li tabindex="0">Region: ${answer[0].region}</li>
@@ -534,9 +542,11 @@ function ready() {
                         $('.quiz-main').html(`
                         <div class="overall-q">
 
+                            <div class="fix">
                             <h3 tabindex="0">That's incorrect. "A - ${q2['A.']}" is the answer.</h3>
                             <div class="for-move-on"><button class="move-on" aria-pressed="false">Next Question</button></div>
                             <h4 tabindex="0">Quick Stats</h4>
+                            </div>
                                 <ul class="particular-ul">
                                     <li tabindex="0">Capital: ${answer[0].capital}</li>
                                     <li tabindex="0">Region: ${answer[0].region}</li>
@@ -576,9 +586,10 @@ function ready() {
         
                 $('main').html(`
                 <div class="overall-q">
-
-                    <h3 tabindex="0">Question 3</h3>
+                    <div class="fix">
+                        <h3 tabindex="0">Question 3</h3>
                         <p class="question03" tabindex="0">What is the timezone of the United Arab Emirates?</p>
+                    </div>
                         <form class="question-form">
                             <ul>
                                 <li><button class="button1" aria-pressed="false">A - ${q3['A.']}</button></li>
@@ -783,9 +794,11 @@ function ready() {
                         $('.quiz-main').html(`
                         <div class="overall-q">
 
+                            <div class="fix">
                             <h3 tabindex="0">That's correct! "C - ${q3['C.']}" is the answer.</h3>
                             <div class="for-move-on"><button class="move-on" aria-pressed="false">Next Question</button></div>
                             <h4 tabindex="0">Quick Stats</h4>
+                            </div>
                                 <ul class="particular-ul">
                                     <li tabindex="0">Capital: ${answer[0].capital}</li>
                                     <li tabindex="0">Region: ${answer[0].region}</li>
@@ -811,9 +824,11 @@ function ready() {
                         $('.quiz-main').html(`
                         <div class="overall-q">
 
+                            <div class="fix">
                             <h3 tabindex="0">That's incorrect. "C - ${q3['C.']}" is the answer.</h3>
                             <div class="for-move-on"><button class="move-on" aria-pressed="false">Next Question</button></div>
                             <h4 tabindex="0">Quick Stats</h4>
+                            </div>
                                 <ul class="particular-ul">
                                     <li tabindex="0">Capital: ${answer[0].capital}</li>
                                     <li tabindex="0">Region: ${answer[0].region}</li>
@@ -852,9 +867,10 @@ function ready() {
         
                 $('main').html(`
                 <div class="overall-q">
-
-                    <h3 tabindex="0">Question 4</h3>
+                    <div class="fix">
+                        <h3 tabindex="0">Question 4</h3>
                         <p class="question04" tabindex="0">What is the capital of China?</p>
+                    </div>
                         <form class="question-form">
                             <ul>
                                 <li><button class="button1" aria-pressed="false">A - ${q4['A.']}</button></li>
@@ -1059,9 +1075,11 @@ function ready() {
                         $('.quiz-main').html(`
                         <div class="overall-q">
 
+                            <div class="fix">
                             <h3 tabindex="0">That's correct! "A - ${q4['A.']}" is the answer.</h3>
                             <div class="for-move-on"><button class="move-on" aria-pressed="false">Next Question</button></div>
                             <h4 tabindex="0">Quick Stats</h4>
+                            </div>
                                 <ul class="particular-ul">
                                     <li tabindex="0">Capital: ${answer[0].capital}</li>
                                     <li tabindex="0">Region: ${answer[0].region}</li>
@@ -1087,9 +1105,11 @@ function ready() {
                         $('.quiz-main').html(`
                         <div class="overall-q">
 
+                            <div class="fix">
                             <h3 tabindex="0">That's incorrect. "A - ${q4['A.']}" is the answer.</h3>
                             <div class="for-move-on"><button class="move-on" aria-pressed="false">Next Question</button></div>
                             <h4 tabindex="0">Quick Stats</h4>
+                            </div>
                                 <ul class="particular-ul">
                                     <li tabindex="0">Capital: ${answer[0].capital}</li>
                                     <li tabindex="0">Region: ${answer[0].region}</li>
@@ -1128,9 +1148,10 @@ function ready() {
         
                 $('main').html(`
                 <div class="overall-q">
-
-                    <h3 tabindex="0">Question 5</h3>
+                    <div class="fix">
+                        <h3 tabindex="0">Question 5</h3>
                         <p class="question05" tabindex="0">What is the currency of Russia?</p>
+                    </div>
                         <form class="question-form">
                             <ul>
                                 <li><button class="button1" aria-pressed="false">A - ${q5['A.']}</button></li>
@@ -1335,9 +1356,11 @@ function ready() {
                         $('.quiz-main').html(`
                         <div class="overall-q">
 
+                            <div class="fix">
                             <h3 tabindex="0">That's correct! "C - ${q5['C.']}" is the answer.</h3>
                             <div class="for-move-on"><button class="move-on" aria-pressed="false">End Quiz</button></div>
                             <h4 tabindex="0">Quick Stats</h4>
+                            </div>
                                 <ul class="particular-ul">
                                     <li tabindex="0">Capital: ${answer[0].capital}</li>
                                     <li tabindex="0">Region: ${answer[0].region}</li>
@@ -1363,9 +1386,11 @@ function ready() {
                         $('.quiz-main').html(`
                         <div class="overall-q">
 
+                            <div class="fix">
                             <h3 tabindex="0">That's incorrect. "C - ${q5['C.']}" is the answer.</h3>
                             <div class="for-move-on"><button class="move-on" aria-pressed="false">End Quiz</button></div>
                             <h4 tabindex="0">Quick Stats</h4>
+                            </div>
                                 <ul class="particular-ul">
                                     <li tabindex="0">Capital: ${answer[0].capital}</li>
                                     <li tabindex="0">Region: ${answer[0].region}</li>
@@ -1397,8 +1422,9 @@ function ready() {
             function last() {
                 $('.quiz-main').html(`
                 <div class="overall-q">
-
+                    <div class="fix">
                     <h4 tabindex="0">Your quiz score was: ${X}/100</h4>
+                    </div>
                     <div class="for-restart"><button class="restart" aria-pressed="false">Restart</button></div>
 
                 </div>
