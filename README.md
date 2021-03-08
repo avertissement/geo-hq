@@ -30,7 +30,7 @@ appropriate, for now. There are some other concerns I neglected to fix but aren'
 
 
 
-<h2>Concerns and Notes</h2>
+<h2>Conclusion</h2>
 
 
 <p>
